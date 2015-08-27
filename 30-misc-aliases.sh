@@ -1,4 +1,4 @@
-alias ls='ls -lhG'
+alias ls='ls -lh --color'
 
 alias key='openssl rsa -text -noout -in'
 alias req='openssl req -text -noout -in'
