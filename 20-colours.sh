@@ -15,28 +15,22 @@ PS1="\[${green}\]\u@\h\[${reset}\] \[${mediumblue}\]\w\[${reset}\]\$ "
 
 # are we an interactive shell?
 if [ "$PS1" ]; then
-    export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     case $TERM in
-    xterm*)
-        PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
-        #PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD}\007"'
-        echo -n "You're on xterm, "
-        ;;
-    screen)
-        PROMPT_COMMAND='printf "\033]0;%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
+    xterm*|putty*|screen)
+        function _update_ps1() {
+           PS1="$(~/git/powerline-shell/powerline-shell.py $? 2> /dev/null)"
+        }
+
+        if [ "$TERM" != "linux" ]; then
+            PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+        fi
+
+        echo -n "You're on ${TERM}, "
         ;;
     *)
         ;;
     esac
     # Turn on checkwinsize
     shopt -s checkwinsize
-    [ "$PS1" = "\\s-\\v\\\$ " ] && PS1="[\u@\h \W]\\$ "
-    # You might want to have e.g. tty in prompt (e.g. more virtual machines)
-    # and console windows
-    # If you want to do so, just add e.g.
-    # if [ "$PS1" ]; then
-    #   PS1="[\u@\h:\l \W]\\$ "
-    # fi
-    # to your custom modification shell script in /etc/profile.d/ directory
 fi
 
