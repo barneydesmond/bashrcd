@@ -22,7 +22,11 @@ if [ "$PS1" ]; then
         }
 
         if [ "$TERM" != "linux" ]; then
-            PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+            if python -c 'import argparse' 2>/dev/null ; then
+                PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+            else
+                echo -n "no argparse, no powerline-shell :( "
+            fi
         fi
 
         echo -n "You're on ${TERM}, "
