@@ -27,5 +27,3 @@ alias dsg='find . -type d'
 alias ve='workon everything'
 
 alias cleanmarquise='cd ~/git/ && rm -rf libmarquise && git clone barneydesmond.github.com:anchor/libmarquise.git && cd libmarquise/ && echo -e "Now run:\n    autoreconf -if\n    ./configure"'
-
-alias linuxkeepassx='ssh -X pu0991dira0001.svcmgt.mgmt.det /home/network/jroberts337/bin/open_keepassx'
