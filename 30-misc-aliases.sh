@@ -1,4 +1,11 @@
-alias ls='ls -lh --color'
+case $(uname -s) in
+	Darwin)
+		alias ls='ls -lhG'
+		;;
+	Linux|*)
+		alias ls='ls -lh --color'
+		;;
+esac
 
 alias key='openssl rsa -text -noout -in'
 alias req='openssl req -text -noout -in'
