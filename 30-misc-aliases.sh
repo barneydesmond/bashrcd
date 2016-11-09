@@ -12,7 +12,7 @@ alias req='openssl req -text -noout -in'
 alias cert='openssl x509 -text -noout -in'
 
 alias pwl='pwgen'
-alias pws='openssl rand -base64 16 | tr -cd a-hjkp-zA-HJKP-Z2-9 | cut -c 1-10'
+alias pws='openssl rand -base64 16 | tr -cd a-hjkp-zA-HJKP-Z2-9 | cut -c 1-16'
 
 alias go='gnome-open'
 
