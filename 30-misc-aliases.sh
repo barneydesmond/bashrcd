@@ -14,7 +14,7 @@ alias cert='openssl x509 -text -noout -in'
 alias pwl='pwgen'
 alias pws='openssl rand -base64 16 | tr -cd a-hjkp-zA-HJKP-Z2-9 | cut -c 1-16'
 
-alias go='gnome-open'
+alias gno='gnome-open'
 
 alias fs='find . -path "*/.git" -prune -o -type f -print'
 alias fsg='find . -type f'
