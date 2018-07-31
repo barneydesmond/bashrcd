@@ -14,7 +14,7 @@ case "$-" in
 		echo   "    Shell is interactive, enhancing... "
 
 		logger "    Starting profile fragments"
-		for profile in $(find ~/.bashrc.d -maxdepth 1 -type f -name '[0-9]*.sh' | sort) ; do
+		for profile in $(find ~/.bashrc.d/ -maxdepth 1 -type f -name '[0-9]*.sh' | sort) ; do
 			if tty -s ; then
 				echo -n "      Sourcing $(basename ${profile})... "
 			fi
