@@ -1,2 +1,4 @@
 export GOPATH=$HOME/go
-export PATH=$PATH:$(go env GOPATH)/bin
+if hash go 2>/dev/null ; then
+	export PATH=$PATH:$(go env GOPATH)/bin
+fi
