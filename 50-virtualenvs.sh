@@ -8,4 +8,6 @@ export PROJECT_HOME=$HOME/git
 # (eg. dateutils)
 #export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
 
-#source /usr/bin/virtualenvwrapper.sh
+if [ -f /usr/bin/virtualenvwrapper.sh ] ; then
+	. /usr/bin/virtualenvwrapper.sh
+fi
