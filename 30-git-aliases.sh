@@ -8,3 +8,5 @@ if [ -f ~/git/dec-tools/bin/bump_branch_completions ] ; then
 fi
 
 alias kw='svn ps svn:keywords "Id URL"'
+
+alias bfg='java -jar /usr/share/bfg/bfg-1.13.0.jar'
