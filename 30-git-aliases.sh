@@ -7,6 +7,10 @@ if [ -f ~/git/dec-tools/bin/bump_branch_completions ] ; then
 	. ~/git/dec-tools/bin/bump_branch_completions
 fi
 
+if [ -f ~/git/dec-tools/bin/netgroup_completions ] ; then
+	. ~/git/dec-tools/bin/netgroup_completions
+fi
+
 alias kw='svn ps svn:keywords "Id URL"'
 
 alias bfg='java -jar /usr/share/bfg/bfg-1.13.0.jar'
