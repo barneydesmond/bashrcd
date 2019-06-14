@@ -6,3 +6,6 @@ shopt -s checkwinsize
 if [ -f /etc/profile.d/bash_completion.sh ] ; then
 	. /etc/profile.d/bash_completion.sh
 fi
+
+# This is OSX, with bash-completion installed via brew
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
