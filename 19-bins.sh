@@ -9,3 +9,8 @@ fi
 if [ -d ~/.local/bin ] ; then
 	export PATH=~/.local/bin:$PATH
 fi
+
+# OSX python binaries
+if [ -d ~/Library/Python/2.7/bin ] ; then
+	export PATH=~/Library/Python/2.7/bin:$PATH
+fi
