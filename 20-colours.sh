@@ -18,8 +18,8 @@ if [ "$PS1" ]; then
     case $TERM in
     xterm*|putty*|screen)
         function _update_ps1() {
-           if [ -x ~/.local/bin/powerline-shell ] ; then
-               PS1="$(~/.local/bin/powerline-shell $? 2> /dev/null)"
+           if hash powerline-shell 2>/dev/null ; then
+               PS1="$(powerline-shell $? 2>/dev/null)"
            else
                echo "(missing ~/git/powerline-shell/ repo)" >&2
            fi
