@@ -1,1 +1,1 @@
-alias mem='cd ~/git/mm ; git pull'
+alias mem='cd ~/git/mm/projects/sysadmin/ ; git pull'
