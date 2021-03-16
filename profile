@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# This is called for ???
-logger -t bdesmond1 "Starting ~/.profile for ${TERM}"
+# This is called... when???
+# Apparently "executed by the command interpreter for login shells."
+logger -t "$USER" "Starting ~/.profile for ${TERM}"
 echo "Starting ~/.profile for ${TERM}"
 
 
