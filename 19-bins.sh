@@ -1,8 +1,3 @@
-# dec-tools is no longer relevant
-#if [ -d ~/git/dec-tools/bin ] ; then
-#	export PATH=~/git/dec-tools/bin:$PATH
-#fi
-
 if [ -d ~/bin ] ; then
 	export PATH=~/bin:$PATH
 fi

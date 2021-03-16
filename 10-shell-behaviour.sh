@@ -12,11 +12,3 @@ fi
 # https://kubernetes.io/docs/tasks/tools/install-kubectl/#enabling-shell-autocompletion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 [[ -r "/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash" ]] && . "/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash"
-
-#If you'd like to use existing homebrew v1 completions, add the following before the first sourcing line:
-#export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-
-# Completions for herbstluftwm window manager
-if [ -f /usr/share/bash-completion/completions/herbstclient-completion ] ; then
-	. /usr/share/bash-completion/completions/herbstclient-completion
-fi
