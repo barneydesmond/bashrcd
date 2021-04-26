@@ -1,1 +1,2 @@
-10-local-secrets.sh
+# Safely(?) push credentials into environment without having them in repo
+*-local-secrets.sh
