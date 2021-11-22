@@ -1,0 +1,10 @@
+# vim: syntax=sh
+# This is for when you're doing local Dutty server development, and need to
+# point to a local DB instance.
+#
+# You should copy this file to 37-dutty-server-dev.sh and change the details as
+# needed.
+export DUTTY_DB_USER=dutty
+export DUTTY_DB_PASS=dutty
+export DUTTY_DB_DBNAME=dutty
+export DUTTY_DB_HOST=127.0.0.1
