@@ -2,6 +2,9 @@
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Search the PATH Again if the hashed command no longer exists
+shopt -s checkhash
+
 # Load tab completions, this path is for Fedora
 if [ -f /etc/profile.d/bash_completion.sh ] ; then
 	. /etc/profile.d/bash_completion.sh
