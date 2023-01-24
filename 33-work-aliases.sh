@@ -9,6 +9,13 @@ if [[ "$HOSTNAME" == "us185."* ]] ; then
 fi
 
 
+# For quiet ansible output
+alias ansible-quiet="export ANSIBLE_DISPLAY_OK_HOSTS=false ; export ANSIBLE_DISPLAY_SKIPPED_HOSTS=false ; echo You will now have very quiet ansible runs, only changes and failures will be ; echo reported. This will persist until you close the terminal or run ansible-loud"
+
+# For back to normal ansible output
+alias ansible-loud="unset ANSIBLE_DISPLAY_OK_HOSTS ; unset ANSIBLE_DISPLAY_SKIPPED_HOSTS ; echo Back to normal ansible output now."
+
+
 # Slurm tools
 alias squeue='squeue -o "%9i %35j %12P %4C %7m %9u %11T %9M %16R %10p %E"'
 
