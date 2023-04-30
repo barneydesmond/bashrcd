@@ -20,3 +20,6 @@ alias fs='find . -path "*/.git" -prune -o -type f -print'
 alias fsg='find . -type f'
 alias ds='find . -path "*/.git" -prune -o -type d -print'
 alias dsg='find . -type d'
+
+# This is apparently a pretty common one for people that use kubectl all day
+alias k='kubectl'
