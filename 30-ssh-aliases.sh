@@ -8,3 +8,7 @@ alias sshreboot='ssh -o ConnectTimeout=1 -o ConnectionAttempts=999'
 alias keymake='make -C ~/.ssh/'
 
 alias clean_known_hosts='ssh-keygen -f ~/.ssh/known_hosts -R'
+
+alias bo='ssh root@build-order'
+alias bc='ssh root@build-chaos'
+alias bz='ssh root@build-zen'
