@@ -23,3 +23,6 @@ alias dsg='find . -type d'
 
 # This is apparently a pretty common one for people that use kubectl all day
 alias k='kubectl'
+
+# It sure would be handy if `ps` showed useful process starttimes for stuff that's a bit older
+alias psstart='ps axfo user,pid,%cpu,%mem,vsz,rss,tname,stat,lstart:25,time:10,args'
