@@ -29,3 +29,8 @@ alias k='kubectl'
 
 # It sure would be handy if `ps` showed useful process starttimes for stuff that's a bit older
 alias psstart='ps axfo user,pid,%cpu,%mem,vsz,rss,tname,stat,lstart:25,time:10,args'
+
+# This is a temporary workaround for me to access the test cluster while rancher is down.
+# I'm reusing the `k` alias as a convenience, normal people just alias it to
+# kubectl but I never remember to use that anyway.
+alias k="kubectl --kubeconfig ~/.kube/onefile_config_sy4-testkube.yml --context=sy4-testkube-sy4-testkube3"

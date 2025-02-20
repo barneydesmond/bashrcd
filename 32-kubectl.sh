@@ -2,6 +2,14 @@ if hash kubectl 2>/dev/null ; then
 	source <(kubectl completion bash)
 fi
 
+# I'm using `k` as an alias for `kubectl` so I need to enable completion for
+# that as well (though it's used to refer to the testkube cluster with a
+# special temporary config).
+# https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#enable-shell-autocompletion
+# It doesn't know how to access the correct cluster via the --config options
+# and stuff, but it's good enough for now.
+complete -o default -F __start_kubectl k
+
 # One of the annoying things about kubectl is that it rewrites the entire
 # config file when you switch contexts, which is sucks if you don't like its
 # yaml formatting, and it removes your comments and whitespacing. Petty but
