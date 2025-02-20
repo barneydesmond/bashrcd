@@ -21,6 +21,9 @@ alias fsg='find . -type f'
 alias ds='find . -path "*/.git" -prune -o -type d -print'
 alias dsg='find . -type d'
 
+# Put display rotation back to normal landscape
+alias normx='xrandr --output DP-3 --transform 1.0000,0.0000,0,0.0000,1.0000,0,0,0,1'
+
 # This is apparently a pretty common one for people that use kubectl all day
 alias k='kubectl'
 
