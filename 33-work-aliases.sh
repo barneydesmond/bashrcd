@@ -1,7 +1,7 @@
 alias mem='cd ~/git/mm/projects/sysadmin/dutty/ ; git pull'
 alias dns='cd ~/git/mm/projects/sysadmin/ansible/infra/dnsmasq ; git pull'
-alias ans='cd ~/git/infra/ansible/'
-alias ks='cd ~/git/infra/k8s/'
+alias ans='cd ~/git/fpga-infra/ansible/'
+alias ks='cd ~/git/fpga-infra/k8s/'
 
 # Different `ans` location on some servers
 if [[ "$HOSTNAME" == "us185."* ]] ; then
