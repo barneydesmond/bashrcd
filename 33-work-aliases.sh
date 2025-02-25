@@ -9,6 +9,12 @@ if [[ "$HOSTNAME" == "us185."* ]] ; then
 fi
 
 
+# This is for the benefit of our ansible repo, it runs ansible-playbook via a
+# docker container instead of a locally installed version. Which is a really
+# cool idea, but it doesn't work on my workstation. So I'll just stick with the
+# local ansible package, it's fine.
+export USE_DOCKER=0
+
 # For quiet ansible output
 alias ansible-quiet="export ANSIBLE_DISPLAY_OK_HOSTS=false ; export ANSIBLE_DISPLAY_SKIPPED_HOSTS=false ; echo You will now have very quiet ansible runs, only changes and failures will be ; echo reported. This will persist until you close the terminal or run ansible-loud"
 
